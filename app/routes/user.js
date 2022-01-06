@@ -1,28 +1,32 @@
-const express = require('express')
+const express = require("express");
 
-const controller = require('../controllers/user')
+const controller = require("../controllers/user");
 
-const router = express.Router()
+const router = express.Router();
 
-const path = 'user'
-
-
+const path = "user";
 
 /**
  * Ruta: /user GET
  */
 
-router.get(
-  `/${path}`,
-  controller.getData
-)
+router.get(`/${path}`, controller.getData);
 /**
  * Ruta: /user GET
  */
 
-router.post(
-  `/${path}`,
-  controller.insertData
-)
+router.post(`/${path}`, controller.insertData);
 
-module.exports = router
+/**
+ * Ruta: /user PUT
+ */
+
+router.put(`/${path}/:id`, controller.updateSingle);
+
+/**
+ * Ruta: /user PUT
+ */
+
+router.delete(`/${path}/:id`, controller.deleteSingle);
+
+module.exports = router;
