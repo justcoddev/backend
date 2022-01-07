@@ -16,12 +16,20 @@ const parseId = (id) => {
  * Obtener DATA de USUARIOS
  */
 exports.getData = (req, res) => {
-  model.paginate({}, options, (err, docs) => {
+  model.find({}, (err, docs) => {
     res.send({
       items: docs,
     });
   });
 };
+
+// exports.getData = (req, res) => {
+//   model.paginate({}, options, (err, docs) => {
+//     res.send({
+//       items: docs,
+//     });
+//   });
+// };
 
 /**
  * Modificar DATA de USUARIOS
@@ -41,9 +49,7 @@ exports.updateSingle = (req, res) => {
  */
 exports.deleteSingle = (req, res) => {
   const { id } = req.params;
-  model.deleteOne(
-    { _id: parseId(id) },
-  (err, docs) => {
+  model.deleteOne({ _id: parseId(id) }, (err, docs) => {
     res.send({
       items: docs,
     });
