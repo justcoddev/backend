@@ -4,29 +4,29 @@ const controller = require("../controllers/usuario");
 
 const router = express.Router();
 
-const path = "usuario";
+const path = "singup";
 /**
  * Ruta: /user GET
  */
 
-router.get(`/${path}`, controller.getData);
+router.get(`/${path}/mostrar`, controller.getData);
 /**
  * Ruta: /user GET
  */
 
-router.post(`/${path}`, controller.insertData);
+router.post(`/${path}/crear`, controller.insertData);
 
 /**
  * Ruta: /user PUT
  */
 
-router.put(`/${path}/:id`, controller.updateSingle);
+router.put(`/${path}/actualizar/:id`, controller.updateSingle);
 
 /**
  * Ruta: /user PUT
  */
 
-router.delete(`/${path}/:id`, controller.deleteSingle);
+router.delete(`/${path}/eliminar/:id`, controller.deleteSingle);
 
 module.exports = router;
 
