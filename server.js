@@ -7,6 +7,7 @@ const port = 3001;
 
 const userRouters = require("./app/routes/user");
 const itemsRouters = require("./app/routes/items");
+const usuarioRouters = require("./app/routes/usuario");
 
 //for parsing json
 app.use(
@@ -24,6 +25,7 @@ app.use(
 
 app.use(userRouters);
 app.use(itemsRouters);
+app.use(usuarioRouters);
 
 app.listen(port, () => {
   console.log("La aplicación está en linea.");
