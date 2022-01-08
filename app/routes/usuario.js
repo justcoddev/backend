@@ -4,7 +4,7 @@ const controller = require("../controllers/usuario");
 
 const router = express.Router();
 
-const path = "singup";
+const path = "signup";
 /**
  * Ruta: /user GET
  */
