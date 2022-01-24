@@ -12,6 +12,7 @@ const options = {
 const parseId = (id) => {
   return mongoose.Types.ObjectId(id);
 };
+
 /**
  * Obtener DATA de USUARIOS
  */

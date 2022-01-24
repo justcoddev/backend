@@ -5,6 +5,7 @@ const controller = require("../controllers/usuario");
 const router = express.Router();
 
 const path = "signup";
+
 /**
  * Ruta: /user GET
  */
@@ -27,7 +28,5 @@ router.put(`/${path}/actualizar/:id`, controller.updateSingle);
  */
 
 router.delete(`/${path}/eliminar/:id`, controller.deleteSingle);
-
-module.exports = router;
 
 module.exports = router;

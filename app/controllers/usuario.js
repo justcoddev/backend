@@ -1,10 +1,13 @@
 // exports.getData = (req, res) =>{
 //   res.send({data: 'Esto viene desde RUTA usuario'})
 // }
-
 const mongoose = require("mongoose");
 const model = require("../models/usuario");
 
+const options = {
+  page: 1,
+  limit: 10,
+};
 //función para el updateSingle
 const parseId = (id) => {
   return mongoose.Types.ObjectId(id);
